@@ -1,0 +1,337 @@
+/* 
+    00 - Variables
+*/
+body {
+    --editor-font-size: 20px;
+}
+
+.theme-dark {
+    --accent-green-1: hsl(137, 47%, 65%);
+    --accent-green-2: hsl(137, 47%, 60%);
+    --accent-red-1: hsl(2, 67%, 60%);
+    --accent-red-2: hsl(2, 67%, 55%);
+    --accent-red-3: hsl(2, 67%, 50%);
+    --accent-blue-1: hsl(188, 60%, 49%);
+    --accent-blue-2: hsl(188, 60%, 44%);
+    --accent-blue-3: hsl(188, 60%, 39%);
+    --accent-purple-1: hsl(328, 31%, 54%);
+
+    --primary: hsl(212, 20%, 11%);
+    --primary-alt: hsl(212, 20%, 15%);
+    --secondary: hsl(212, 20%, 13%);
+    --secondary-alt: hsl(212, 20%, 15%);
+
+    --background-primary: var(--primary);
+    --background-primary-alt: var(--primary-alt);
+    --background-secondary: var(--secondary);
+    --background-secondary-alt: var(--secondary-alt);
+    --background-modifier-border: hsl(200, 6%, 10%);
+    --background-modifier-form-field: ;
+    --background-modifier-form-field-highlighted: ;
+    --background-modifier-box-shadow: ;
+
+    --background-modifier-success: hsl(137, 47%, 50%);
+    --background-modifier-error: var(--accent-red-1);
+    --background-modifier-error-hover: var(--accent-red-2);
+    --background-modifier-cover: ;
+    --background-modifier-border: var(--secondary-alt);
+    --text-accent: var(--accent-blue-1);
+    --text-accent-hover: var(--accent-blue-2);
+    --text-normal: #d1d1d1;
+    --text-muted: hsl(212, 20%, 50%);
+    --text-faint: hsl(212, 20%, 40%);
+    --text-error: var(--accent-red-2);
+    --text-error-hover: var(--accent-red-3);
+    --text-highlight-bg: var(--accent-red-1);
+    --text-selection: var(--accent-blue-3);
+    --text-on-accent: #d1d1d1;
+    --interactive-normal: var(--secondary-alt);
+    --interactive-hover: var(--primary-alt);
+    --interactive-accent: var(--accent-blue-1);
+    --interactive-accent-hover: var(--accent-blue-2);
+    --interactive-success: var(--accent-green);
+    --scrollbar-active-thumb-bg: var(--accent-green-2);
+    --scrollbar-bg: var(--secondary);
+    --scrollbar-thumb-bg: var(--primary-alt);
+}
+.theme-light {
+    --accent-green-1: hsl(137, 47%, 65%);
+    --accent-green-2: hsl(137, 47%, 60%);
+    --accent-red-1: hsl(2, 67%, 60%);
+    --accent-red-2: hsl(2, 67%, 55%);
+    --accent-red-3: hsl(2, 67%, 50%);
+    --accent-blue-1: hsl(188, 60%, 49%);
+    --accent-blue-2: hsl(188, 60%, 44%);
+    --accent-blue-3: hsl(188, 60%, 39%);
+    --accent-purple-1: hsl(328, 31%, 54%);
+
+    --primary: white;
+    --primary-alt: #f4f4f4;
+    --secondary: white;
+    --secondary-alt: #f4f4f4;
+
+    --background-primary: var(--primary);
+    --background-primary-alt: var(--primary-alt);
+    --background-secondary: var(--secondary);
+    --background-secondary-alt: var(--secondary-alt);
+    --background-modifier-border: hsl(200, 6%, 10%);
+    --background-modifier-form-field: ;
+    --background-modifier-form-field-highlighted: ;
+    --background-modifier-box-shadow: ;
+
+    --background-modifier-success: hsl(137, 47%, 50%);
+    --background-modifier-error: var(--accent-red-1);
+    --background-modifier-error-hover: var(--accent-red-2);
+    --background-modifier-cover: ;
+    --background-modifier-border: var(--secondary-alt);
+    --text-accent: var(--accent-blue-1);
+    --text-accent-hover: var(--accent-blue-2);
+    --text-normal: #222222;
+    --text-muted: #888888;
+    --text-faint: #cacaca;
+    --text-error: var(--accent-red-2);
+    --text-error-hover: var(--accent-red-3);
+    --text-highlight-bg: var(--accent-red-1);
+    --text-selection: var(--accent-blue-3);
+    --text-on-accent: white;
+    --interactive-normal: var(--secondary-alt);
+    --interactive-hover: var(--primary-alt);
+    --interactive-accent: var(--accent-blue-1);
+    --interactive-accent-hover: var(--accent-blue-2);
+    --interactive-success: var(--accent-green);
+    --scrollbar-active-thumb-bg: var(--accent-green-2);
+    --scrollbar-bg: var(--primary-alt);
+    --scrollbar-thumb-bg: var(--secondary);
+}
+
+
+
+
+/* 01 - text styles */
+
+
+
+span.cm-highlight {
+    padding: 2px;
+    color: white;
+}
+mark {
+    padding: 2px 1rem 2px 1rem;
+    border-radius: 2px;
+    color: white;
+}
+.cm-formatting-highlight {
+    color: var(--accent-red-3) !important;
+}
+
+.cm-strong ,
+strong {
+    color: var(--accent-red-1);
+}
+
+.cm-em,
+em {
+    color: var(--accent-green-1)
+}
+
+
+/* 01-03 link styles */
+
+a, .markdown-preview-view .interanl-link {
+    text-decoration: none;
+}
+a.internal-link.is-unresolved {
+    color: var(--accent-blue-2);
+    opacity: 1 !important;
+}
+
+span.cm-inline-code {
+    color: var(--accent-red-1) !important;
+}
+
+
+/* 01-04 tag styles */
+
+.tag {
+    font-style: bold !important;
+    text-decoration: none;
+    background-color: var(--secondary-alt);
+    padding: 0.5em;
+    border-radius: 5px;
+}
+div.frontmatter-section-tags a.tag {
+    background-color: var(--primary);
+}
+a.tag[href="#TODO"] {
+    color: var(--accent-red-1);
+}
+.tag:hover {
+    transform: scale(1.1);
+    color: var(--accent-green-1);
+}
+
+
+/* 01-05 header styles */
+.cm-formatting-header {
+    font-size: 10px;
+    padding-right: 1em;
+    color: var(--text-faint);
+}
+
+
+.cm-blockid {
+    font-size: 8px !important;
+}
+
+.view-header {
+    background-color: var(--primary) !important;
+}
+.view-header-title-container::after {
+    background: transparent !important;
+}
+
+
+.cm-formatting {
+    color: var(--text-faint);
+}
+
+/* 
+    01-05 Cursor style
+    Credit to Discord user Whyl: https://discord.com/channels/686053708261228577/702656734631821413/873807022091542589
+*/
+.cm-fat-cursor .CodeMirror-cursor, 
+.cm-animate-fat-cursor {
+  width: 0.4em;
+  background: var(--accent-red-1);
+  opacity: 0.6 !important;
+}
+.CodeMirror-cursor, .cm-s-obsidian .cm-cursor{
+border-left: 2px solid var(--accent-blue-1);
+}
+
+
+/* 01-06 code block styles */
+
+code.language-js > .token.keyword {
+    color: var(--accent-purple-1);
+}
+code.language-js > .token.function {
+    color: var(--accent-blue-1);
+}
+
+
+
+/* 02 ui elements */
+
+.nav-file-title.is-active {
+    background-color:var(--accent-blue-1);
+    color: var(--text-on-accent);
+}
+.nav-file-titlte.is-active:hover {
+    background-color: var(--accent-blue-3);
+    color: var(--text-on-accent);
+}
+
+.status-bar {
+    font-size: 10px;
+    justify-content: center;
+}
+.status-bar .status-bar-item {
+    margin: auto;
+}
+
+/* 02-02 Menus and Modals */
+.menu {
+
+}
+
+.modal-bg {
+    backdrop-filter: blur(8px);
+}
+
+.menu-item.selected {
+    background-color: var(--secondary-alt) !important;
+}
+
+.workspace-ribbon {
+    background-color: var(--secondary);
+}
+.workspace-ribbon.is-collapsed {
+    background-color: var(--primary);
+}
+
+
+.workspace-tab-header-container,
+.workspace-tab-header,
+.workspace-tab-container-before,
+.workspace-tab-container-after.is-after-active,
+.is-after-active,
+.is-before-active {
+    background-color: var(--secondary) !important;
+}
+.workspace-tab-container-before.is-before-active .workspace-tab-header-inner, 
+.workspace-tab-container-after.is-after-active .workspace-tab-header-inner, 
+.workspace-tab-header.is-before-active .workspace-tab-header-inner,
+.workspace-tab-header.is-after-active .workspace-tab-header-inner {
+    background-color: var(--background-secondary);
+}
+
+input[type="checkbox"] {
+    
+}
+
+
+
+.task-list-item.is-checked {
+    text-decoration: none;
+}
+
+.workspace-ribbon-collapse-btn {
+    margin-top: 50%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.workspace-ribbon {
+    display: flex;
+}
+
+.workspace-ribbon:hover {
+    display: flex;
+}
+
+
+
+/* 02 Plugin styles */
+
+
+/* editor syntax highlighting */
+
+span.cm-meta.cm-hmd-frontmatter {
+    color: var(--accent-blue-3) !important;
+}
+
+span.cm-atom.cm-hmd-frontmatter {
+    color: var(--accent-red-1) !important;
+}
+
+span.cm-string.cm-hmd-frontmatter {
+    color: var(--accent-green-1) !important;
+}
+
+span.cm-def.cm-hmd-frontmatter {
+    color: var(--accent-blue-1) !important;
+}
+
+span.cm-number.cm-hmd-frontmatter {
+    color: --accent-purple-1;
+}
+
+/* calendar styles */
+
+
+/* kanban styles */
+
+.kanban-plugin__item.is-complete {
+    color: var(--text-muted);
+}
