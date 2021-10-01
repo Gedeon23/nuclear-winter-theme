@@ -110,7 +110,7 @@ body {
 /* 01 - text styles */
 
 
-
+/* 01-00 mark/highlight */
 span.cm-highlight {
     padding: 2px;
     color: white;
@@ -124,11 +124,15 @@ mark {
     color: var(--accent-red-3) !important;
 }
 
+
+/* 01-01 strong/bold */
 .cm-strong ,
 strong {
     color: var(--accent-red-1);
 }
 
+
+/* 01-02 emphasis/italic */
 .cm-em,
 em {
     color: var(--accent-green-1)
@@ -165,9 +169,16 @@ div.frontmatter-section-tags a.tag {
 a.tag[href="#TODO"] {
     color: var(--accent-red-1);
 }
-.tag:hover {
+a.tag[href^="#evergreen"] {
+    color: var(--accent-green-1);
+}
+a.tag:hover {
     transform: scale(1.1);
     color: var(--accent-green-1);
+}
+a.tag[href^="#evergreen"]:hover {
+    transform: scale(1.1);
+    color: var(--accent-blue-1);
 }
 
 
@@ -220,6 +231,13 @@ code.language-js > .token.function {
 }
 
 
+/* 01-07 blockquotes */
+.markdown-preview-view blockquote {
+    background-color: var(--secondary-alt);
+    border-radius: 0.5em;
+    border-left: 4px solid var(--accent-green-1);
+    border-bottom: 1px solid var(--accent-green-1);
+}
 
 /* 02 ui elements */
 
@@ -243,6 +261,10 @@ code.language-js > .token.function {
 /* 02-02 Menus and Modals */
 .menu {
 
+}
+
+.modal {
+    max-width: 1132px;
 }
 
 .modal-bg {
