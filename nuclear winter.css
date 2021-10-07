@@ -16,10 +16,16 @@ body {
     --accent-blue-3: hsl(188, 60%, 39%);
     --accent-purple-1: hsl(328, 31%, 54%);
 
-    --primary: hsl(212, 20%, 11%);
+    /* --primary: hsl(212, 20%, 11%);
     --primary-alt: hsl(212, 20%, 15%);
     --secondary: hsl(212, 20%, 13%);
-    --secondary-alt: hsl(212, 20%, 15%);
+    --secondary-alt: hsl(212, 20%, 15%); */
+    
+    --primary: hsl(212, 9%, 11%);
+    --primary-alt: hsl(212, 9%, 15%);
+    --secondary: hsl(212, 9%, 13%);
+    --secondary-alt: hsl(212, 9%, 15%);
+
 
     --background-primary: var(--primary);
     --background-primary-alt: var(--primary-alt);
@@ -116,7 +122,7 @@ span.cm-highlight {
     color: white;
 }
 mark {
-    padding: 2px 1rem 2px 1rem;
+    padding: 2px 0.5rem 2px 0.5rem;
     border-radius: 2px;
     color: white;
 }
@@ -264,6 +270,9 @@ code.language-js > .token.function {
 }
 
 .modal {
+    max-width: 1132px;
+}
+.modal.mod-settings {
     max-width: 1132px;
 }
 
